@@ -99,26 +99,7 @@ void ndarray_print(const mp_print_t *print, const mp_obj_t self_in, mp_print_kin
 
 void ndarray_print_debug(ndarray_obj_t *self) {
 
-    printf("\nNDARRAY with %zu dimensions", self->dims);
-    printf("\n> typecode: %c", self->typecode);
-    printf("\n> size: %zu", self->size);
-    printf("\n> shapes: ");
-    for (size_t i = 0; i < self->dims; i++) {
-        printf("%zu, ", self->shape[i]);
-    }
-    printf("\n> slices: ");
-    for (size_t i = 0; i < self->dims; i++) {
-        printf("\n  start = %zu, stop = %zu, step = %zu", self->slice[i].start, self->slice[i].stop, self->slice[i].step);
-    }
-    printf("\n> array_size: %zu", self->array_size);
-    printf("\n> array_shapes: ");
-    for (size_t i = 0; i < self->dims; i++) {
-        printf("%zu, ", self->array_shape[i]);
-    }
-    printf("\n> array_bytes: %zu", self->bytes);
-    printf("\n> array->typecode: %c", self->array->typecode);
-    printf("\n");
-
+    
 }
 
 // ASSIGN

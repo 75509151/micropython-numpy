@@ -20,12 +20,11 @@ ndarray_obj_t *
 array_create_new(size_t dims, size_t* shape, uint8_t typecode, bool initialize);
 
 // ARRAY COPY
-
 void
 array_copy_recursive(size_t in_level,
-                     ndarray_obj_t *origin, mp_uint_t origin_offset,
+                     ndarray_obj_t *in, size_t in_offset,
                      size_t out_level,
-                     ndarray_obj_t *destination, mp_uint_t destination_offset);
+                     ndarray_obj_t *out, size_t out_offset);
 
 mp_obj_t array_copy(mp_obj_t self_in);
 

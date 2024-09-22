@@ -209,6 +209,9 @@ array_get_val_array(char typecode, void *p, size_t index) {
 
 void
 array_set_val_array(char typecode, void *p, size_t index, mp_obj_t val_in) {
+    if(val_in==NULL){
+      return;
+    }
     switch (typecode) {
 #if MICROPY_PY_BUILTINS_FLOAT
         case 'f':

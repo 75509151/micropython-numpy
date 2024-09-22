@@ -2,6 +2,9 @@
 
 bool
 ndarray_is_scalar(mp_obj_t arg) {
+    if (arg==NULL){
+      return false;
+    }
 
     if (arg == mp_const_false || arg == mp_const_true ||
         mp_obj_is_small_int(arg) || mp_obj_is_type(arg, &mp_type_int) ||
@@ -13,7 +16,9 @@ ndarray_is_scalar(mp_obj_t arg) {
 
 ndarray_scalar_t
 ndarray_get_scalar(mp_obj_t arg) {
-
+    if (arg==NULL){
+      return NULL;
+    }
     // follows mp_obj_get_int
     ndarray_scalar_t scalar = { .typecode=' ', .base_type.int_ = 0 };
 

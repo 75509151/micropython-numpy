@@ -235,4 +235,4 @@ const mp_obj_module_t numpy_user_cmodule = {
     .globals = (mp_obj_dict_t*)&mp_module_numpy_globals,
 };
 
-MP_REGISTER_MODULE(MP_QSTR_numpy, numpy_user_cmodule, MODULE_NUMPY_ENABLED);
+MP_REGISTER_MODULE(MP_QSTR_numpy, numpy_user_cmodule);
