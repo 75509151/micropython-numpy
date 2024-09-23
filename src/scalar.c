@@ -16,9 +16,6 @@ ndarray_is_scalar(mp_obj_t arg) {
 
 ndarray_scalar_t
 ndarray_get_scalar(mp_obj_t arg) {
-    if (arg==NULL){
-      return NULL;
-    }
     // follows mp_obj_get_int
     ndarray_scalar_t scalar = { .typecode=' ', .base_type.int_ = 0 };
 
