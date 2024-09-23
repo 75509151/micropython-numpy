@@ -12,7 +12,7 @@
 #include "array2d.h"
 #include "unary.h"
 #include "binary.h"
-
+# if MODULE_NUMPY_ENABLED
 #define NUMPY_VERSION 0.100
 #define NUMPY_MAJOR 0
 #define NUMPY_MINOR 1
@@ -236,3 +236,4 @@ const mp_obj_module_t numpy_user_cmodule = {
 };
 
 MP_REGISTER_MODULE(MP_QSTR_numpy, numpy_user_cmodule);
+#endif
